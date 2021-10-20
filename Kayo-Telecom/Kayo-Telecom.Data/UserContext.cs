@@ -16,16 +16,19 @@ namespace Kayo_Telecom.Data
         public DbSet<Subscription> Subscriptions { get; set; }
         public DbSet<User> Users { get; set; }
 
+        public UserContext(DbContextOptions options) : base(options) { }
 
+        /*
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer("Data Source=DESKTOP-2A9J2RD;Initial Catalog=KayoDB;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False;")
+                optionsBuilder.UseSqlServer("Data Source=DESKTOP-2A9J2RD;Initial Catalog=KayoDb;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False;")
                     .LogTo(Console.WriteLine, new[] { DbLoggerCategory.Database.Command.Name }, LogLevel.Information)
                     .EnableSensitiveDataLogging();
             }
         }
+        */
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -37,6 +40,7 @@ namespace Kayo_Telecom.Data
 
             modelBuilder.Entity<Subscription>().HasOne(p => p.Plan);
             modelBuilder.Entity<Subscription>().HasOne(p => p.User);
+            modelBuilder.Entity<Subscription>().HasMany(p => p.Devices);
 
             modelBuilder.Entity<Device>().HasOne(p => p.Subscription);
 

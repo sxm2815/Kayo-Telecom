@@ -121,7 +121,7 @@ namespace Kayo_Telecom.Data.Migrations
             modelBuilder.Entity("Kayo_Telecom.Domain.Device", b =>
                 {
                     b.HasOne("Kayo_Telecom.Domain.Subscription", "Subscription")
-                        .WithMany()
+                        .WithMany("Devices")
                         .HasForeignKey("SubscriptionId");
 
                     b.Navigation("Subscription");
@@ -140,6 +140,11 @@ namespace Kayo_Telecom.Data.Migrations
                     b.Navigation("Plan");
 
                     b.Navigation("User");
+                });
+
+            modelBuilder.Entity("Kayo_Telecom.Domain.Subscription", b =>
+                {
+                    b.Navigation("Devices");
                 });
 
             modelBuilder.Entity("Kayo_Telecom.Domain.User", b =>

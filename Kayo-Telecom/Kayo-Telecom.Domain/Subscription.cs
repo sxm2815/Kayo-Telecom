@@ -11,5 +11,6 @@ namespace Kayo_Telecom.Domain
         public int Id { get; set; }
         public Plan Plan { get; set; }
         public User User { get; set; }
+        public List<Device> Devices { get; set; }
     }
 }

@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "Kayo-Telecom.UI/1.0.0": {
+        "runtime": {
+          "Kayo-Telecom.UI.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Kayo-Telecom.UI/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
