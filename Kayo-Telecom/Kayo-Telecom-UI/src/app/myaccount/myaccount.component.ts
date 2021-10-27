@@ -10,6 +10,7 @@ export class MyaccountComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    document.body.style.background = "#f4faff";
   }
 
 }

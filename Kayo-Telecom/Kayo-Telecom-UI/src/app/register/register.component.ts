@@ -15,6 +15,7 @@ export class RegisterComponent implements OnInit {
   constructor(private userService: UserService, private router: Router) { }
 
   ngOnInit(): void {
+    document.body.style.background = "#f4faff";
   }
 
   save(): void {

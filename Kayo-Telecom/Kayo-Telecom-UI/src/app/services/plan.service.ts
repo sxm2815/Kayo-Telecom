@@ -12,6 +12,10 @@ export class PlanService {
 
   constructor(private httpClient: HttpClient) { }
 
+  findAll():Observable<Plan[]> {
+    return this.httpClient.get<Plan[]>(this.url);
+  }
+
   find(plan: Plan): Observable<Plan> {
     return this.httpClient.get<Plan>(this.url + `/${plan.id}`);
   }

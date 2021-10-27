@@ -1,1 +1,18 @@
-<p>purchaseplan works!</p>
+<div class="text-center">
+    <h1>All Plans</h1>
+
+    <ul class="list-group list-group-horizontal text-center">
+        <li *ngFor="let plan of planList">
+            <div class="plan">
+                <h1>${{ plan.price }}</h1>
+                
+                <h2>{{ plan.name }}</h2>
+
+                <h4>{{ plan.description }}</h4>
+                <hr>
+                <p>Bandwidth Limit: {{ plan.bandwidthLimit }}</p>
+                <p>Max Devices: {{ plan.devices }}</p>
+            </div>
+        </li>
+    </ul>
+</div>

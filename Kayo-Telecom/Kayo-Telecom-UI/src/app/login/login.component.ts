@@ -16,11 +16,13 @@ export class LoginComponent implements OnInit {
   constructor(private userService:UserService, private router: Router) { }
 
   ngOnInit(): void {
+    document.body.style.background = "#f4faff";
   }
 
   login(): void {
     this.userService.login(this.username, this.password).subscribe(data => {
-      console.log(data);
+      localStorage.setItem('loggedOn','true');
+      localStorage.setItem('userID','2');
     })
   }
 

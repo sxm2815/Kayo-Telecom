@@ -1,0 +1,16 @@
+li {
+    list-style: none;
+}
+ul{
+    width: auto;
+    margin: auto;
+    display:inline-flex;
+}
+.plan{
+    margin: 2em;
+    padding: 2em;
+    border-style: solid;
+    border-radius: 8px;
+    color:#aaabc5;
+    background-color: #343A40;
+}

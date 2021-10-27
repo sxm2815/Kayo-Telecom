@@ -17,8 +17,8 @@ export class UserService {
   }
 
   //get specific user by id ie: api/Users/5
-  find(user: User):Observable<User> {
-    return this.httpClient.get<User>(this.url + `/${user.id}`);
+  find(userID: string):Observable<User> {
+    return this.httpClient.get<User>(this.url + `/${userID}`);
   }
 
   //post api/Users to create new user
