@@ -21,9 +21,23 @@ export class LoginComponent implements OnInit {
 
   login(): void {
     this.userService.login(this.username, this.password).subscribe(data => {
-      localStorage.setItem('loggedOn','true');
-      localStorage.setItem('userID','2');
-    })
+      if(data != -1){
+        localStorage.setItem('loggedOn', 'true');
+        localStorage.setItem('userID',data.toString());
+      } else {
+        localStorage.setItem('loggedOn','false');
+      }
+    });
+
+    if(localStorage.getItem('loggedOn') == 'true'){
+      this.router.navigateByUrl('/')
+      .then(() => {
+        window.location.reload();
+      });
+    } else {
+      alert("Incorrect Username or Password");
+      window.location.reload();
+    }
   }
 
 }

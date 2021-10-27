@@ -12,8 +12,8 @@ export class UserService {
 
   constructor(private httpClient: HttpClient) { }
 
-  login(username: string, password: string): Observable<User> {
-    return this.httpClient.get<User>(this.url + `/${username}` + `/${password}`)
+  login(username: string, password: string): Observable<number> {
+    return this.httpClient.get<number>(this.url + `/${username}` + `/${password}`)
   }
 
   //get specific user by id ie: api/Users/5
