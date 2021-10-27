@@ -1,0 +1,18 @@
+.title{
+    color:#08090A;
+    font-size: 5em;
+}
+.jumbotron {
+    margin-top: 1em;
+    height: 100%;
+}
+
+body{ 
+    height: 100%;
+    margin: 0;
+}
+
+.wrapper {
+    position: relative;
+    min-height: 100vh;
+}

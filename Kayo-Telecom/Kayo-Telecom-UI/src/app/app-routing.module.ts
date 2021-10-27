@@ -6,8 +6,10 @@ import { UserinfoComponent } from './userinfo/userinfo.component';
 import { PurchaseplanComponent } from './purchaseplan/purchaseplan.component';
 import { EditdeviceplansComponent } from './editdeviceplans/editdeviceplans.component';
 import { MyaccountComponent } from './myaccount/myaccount.component';
+import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
+{ path: '', component: HomeComponent},
 { path: 'login', component: LoginComponent },
 { path: 'register', component: RegisterComponent },
 { path: 'userinfo', component: UserinfoComponent },

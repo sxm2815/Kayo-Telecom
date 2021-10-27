@@ -1,8 +1,19 @@
 .navbar{
-  background-color: aliceblue;
+  background-color: #343a40;
+  color:#f4faff;
   margin: 0;
 }
 
 .navbar-brand{
   padding-left: 1em;
+  color:#f4faff;
+}
+.navbar-brand:hover{
+  color:#f4faff;
+}
+ul{
+  padding-right: 1em;
+}
+a .nav-link{
+  color:#f4faff;
 }

@@ -1,1 +1,24 @@
-<p>login works!</p>
+<div class="jumbotron">
+    <h2 class="text-center">Login</h2>
+    <form id="login-form" (ngSubmit)="login(); loginForm.reset()" #loginForm >
+        <div class="form-group">
+            <label for="Username">Email/Phone Number</label>
+            <input [(ngModel)]="username" name="Username" class="form-control" id="Username" type="text" required maxlength="30" #Username="ngModel" />
+            <div class="alert" *ngIf="Username.invalid && (Username.dirty || Username.touched)">
+                <div *ngIf="Username.errors?.required">First Name is required</div>
+                <div *ngIf="Username.errors?.maxlength">First Name cannot be more than 30 characters</div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="Password">Password</label>
+            <input [(ngModel)]="password" name="Password" class="form-control" id="Password" type="password" required maxlength="50" #Password="ngModel" />
+            <div class="alert" *ngIf="Password.invalid && (Password.dirty || Password.touched)">
+                <div *ngIf="Password.errors?.required">Password is required</div>
+                <div *ngIf="Password.errors?.maxlength">Password cannot be more than 10 digits</div>
+            </div>
+        </div>
+        <div>
+            <input class="btn btn-primary submit-button" type="submit" value="Login" style="margin-top: 5px;" />
+        </div>
+    </form>
+</div>
