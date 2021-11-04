@@ -10,16 +10,12 @@ import { UserService } from '../services/user.service';
 })
 export class UserinfoComponent implements OnInit {
   
-  user:User = new User("","","","","");
+  user:User = new User("","","","");
 
 
   constructor(private userService: UserService, private router: Router) { }
 
-  ngOnInit(): void {
-    //SETTING LOCAL STORAGE UNTIL GET BY LOGIN IS SOLVED!!!!! @@@@@@@@
-    //localStorage.setItem('userID','2');
-    //localStorage.setItem('loggedOn','true');
-    
+  ngOnInit(): void {    
     this.userService.find(this.getLocalStorageId()).subscribe(data => {
       this.user = data;
     })

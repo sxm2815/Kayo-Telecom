@@ -13,4 +13,5 @@ ul{
     border-radius: 8px;
     color:#aaabc5;
     background-color: #343A40;
+    cursor: pointer;
 }

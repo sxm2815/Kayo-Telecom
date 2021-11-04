@@ -10,11 +10,11 @@ import { RegisterComponent } from './register/register.component';
 import { UserinfoComponent } from './userinfo/userinfo.component';
 import { PurchaseplanComponent } from './purchaseplan/purchaseplan.component';
 import { MyaccountComponent } from './myaccount/myaccount.component';
-import { EditdeviceplansComponent } from './editdeviceplans/editdeviceplans.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HomeComponent } from './home/home.component';
 import { FooterComponent } from './footer/footer.component';
+import { EditDeviceComponent } from './edit-device/edit-device.component';
 
 @NgModule({
   declarations: [
@@ -24,10 +24,10 @@ import { FooterComponent } from './footer/footer.component';
     UserinfoComponent,
     PurchaseplanComponent,
     MyaccountComponent,
-    EditdeviceplansComponent,
     NavbarComponent,
     HomeComponent,
-    FooterComponent
+    FooterComponent,
+    EditDeviceComponent
   ],
   imports: [
     BrowserModule,

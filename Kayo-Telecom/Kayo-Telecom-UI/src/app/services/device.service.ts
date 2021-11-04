@@ -12,8 +12,8 @@ export class DeviceService {
 
   constructor(private httpClient: HttpClient) { }
 
-  find(device:Device):Observable<Device> {
-    return this.httpClient.get<Device>(this.url + `/${device.id}`);
+  find(deviceId:number):Observable<Device> {
+    return this.httpClient.get<Device>(this.url + `/${deviceId}`);
   }
 
   save(device:Device):Observable<number> {

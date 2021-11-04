@@ -2,7 +2,7 @@
     <h2 class="text-center">Login</h2>
     <form id="login-form" (ngSubmit)="login(); loginForm.reset()" #loginForm >
         <div class="form-group">
-            <label for="Username">Email/Phone Number</label>
+            <label for="Username">Email</label>
             <input [(ngModel)]="username" name="Username" class="form-control" id="Username" type="text" required maxlength="30" #Username="ngModel" />
             <div class="alert" *ngIf="Username.invalid && (Username.dirty || Username.touched)">
                 <div *ngIf="Username.errors?.required">First Name is required</div>

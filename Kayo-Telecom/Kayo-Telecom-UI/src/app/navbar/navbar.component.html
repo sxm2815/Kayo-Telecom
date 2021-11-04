@@ -8,17 +8,17 @@
       <li class="nav-item" *ngIf="!loggedIn">
         <a class="nav-link" routerLink="/register" routerLinkActive="active">Register</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/purchaseplan" routerLinkActive="active">Plans</a>
-      </li>
-      <li class="nav-item" *ngIf="loggedIn" >
-        <a class="nav-link" routerLink="/myaccount" routerLinkActive="active">My Subscriptions</a>
-      </li>
       <li class="nav-item" *ngIf="loggedIn">
         <a class="nav-link" routerLink="/userinfo" routerLinkActive="active">Profile</a>
       </li>
-      <li class="nav-item" *ngIf="loggedIn">
-        <a class="nav-link" routerLink="/editdeviceplans" routerLinkActive="active">Edit Devices</a>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/purchaseplan" routerLinkActive="active">Plans</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/editdevice" routerLinkActive="active">Edit Device</a>
+      </li>
+      <li class="nav-item" *ngIf="loggedIn" >
+        <a class="nav-link" routerLink="/myaccount" routerLinkActive="active">My Subscriptions</a>
       </li>
       <li class="nav-item" *ngIf="loggedIn">
         <a class="nav-link" routerLink="/#" (click)="logout()" routerLinkActive="active">Logout</a>
