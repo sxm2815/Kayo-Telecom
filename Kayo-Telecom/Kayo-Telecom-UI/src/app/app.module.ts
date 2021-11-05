@@ -15,6 +15,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HomeComponent } from './home/home.component';
 import { FooterComponent } from './footer/footer.component';
 import { EditDeviceComponent } from './edit-device/edit-device.component';
+import { AddDeviceComponent } from './add-device/add-device.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { EditDeviceComponent } from './edit-device/edit-device.component';
     NavbarComponent,
     HomeComponent,
     FooterComponent,
-    EditDeviceComponent
+    EditDeviceComponent,
+    AddDeviceComponent
   ],
   imports: [
     BrowserModule,

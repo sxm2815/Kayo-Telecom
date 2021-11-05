@@ -8,7 +8,7 @@ import { Device } from '../model/device.model';
 })
 export class DeviceService {
 
-  url = 'https://kayo-telecom-service.azurewebsites.net/api/Devices';
+  url = 'https://kayo-telecom-service.azurewebsites.net/api/devices';
 
   constructor(private httpClient: HttpClient) { }
 
