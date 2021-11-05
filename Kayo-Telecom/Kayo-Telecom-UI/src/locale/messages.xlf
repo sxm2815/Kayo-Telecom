@@ -250,40 +250,19 @@
         </context-group>
       </trans-unit>
       <trans-unit id="kayoTitle" datatype="html">
-        <source>KAYO TELECOM</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/home/home.component.html</context>
-          <context context-type="linenumber">2</context>
-        </context-group>
+        <source> Kayo Telecom </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/navbar/navbar.component.html</context>
-          <context context-type="linenumber">3</context>
-        </context-group>
-        <note priority="1" from="description">Company Name</note>
-        <note priority="1" from="meaning">Home Title</note>
-      </trans-unit>
-      <trans-unit id="kayoDescription" datatype="html">
-        <source>The Future of Telecommucations</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/home/home.component.html</context>
-          <context context-type="linenumber">4</context>
-        </context-group>
-        <note priority="1" from="description">Company Slogan</note>
-        <note priority="1" from="meaning">Home Slogan</note>
-      </trans-unit>
-      <trans-unit id="KayoHomeButton" datatype="html">
-        <source>View Options</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/home/home.component.html</context>
           <context context-type="linenumber">5</context>
         </context-group>
-        <note priority="1" from="description">Home View Options Button</note>
+        <note priority="1" from="description">Company Name</note>
+        <note priority="1" from="meaning">Navbar Title</note>
       </trans-unit>
       <trans-unit id="kayoLogin" datatype="html">
         <source>Login</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/navbar/navbar.component.html</context>
-          <context context-type="linenumber">6</context>
+          <context context-type="linenumber">8</context>
         </context-group>
         <note priority="1" from="description">Login</note>
         <note priority="1" from="meaning">Navbar Login</note>
@@ -292,7 +271,7 @@
         <source>Register</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/navbar/navbar.component.html</context>
-          <context context-type="linenumber">9</context>
+          <context context-type="linenumber">11</context>
         </context-group>
         <note priority="1" from="description">Register</note>
         <note priority="1" from="meaning">Navbar Register</note>
@@ -301,7 +280,7 @@
         <source>Profile</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/navbar/navbar.component.html</context>
-          <context context-type="linenumber">12</context>
+          <context context-type="linenumber">14</context>
         </context-group>
         <note priority="1" from="description">Profile</note>
         <note priority="1" from="meaning">Navbar Profile</note>
@@ -310,7 +289,7 @@
         <source>Plans</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/navbar/navbar.component.html</context>
-          <context context-type="linenumber">15</context>
+          <context context-type="linenumber">17</context>
         </context-group>
         <note priority="1" from="description">Plan</note>
         <note priority="1" from="meaning">Navbar Plans</note>
@@ -319,7 +298,7 @@
         <source>My Subscriptions</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/navbar/navbar.component.html</context>
-          <context context-type="linenumber">18</context>
+          <context context-type="linenumber">21</context>
         </context-group>
         <note priority="1" from="description">Subscription</note>
         <note priority="1" from="meaning">Navbar Subscription</note>
@@ -328,7 +307,7 @@
         <source>Logout</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/navbar/navbar.component.html</context>
-          <context context-type="linenumber">21</context>
+          <context context-type="linenumber">24</context>
         </context-group>
         <note priority="1" from="description">Logout</note>
         <note priority="1" from="meaning">Navbar Logout</note>

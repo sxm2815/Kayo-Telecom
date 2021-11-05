@@ -19,7 +19,7 @@ steps:
     nvm install 14.15
     sudo npm install -g @angular/cli
     npm install
-    ng build --prod
+    ng build --prod --localize
   displayName: 'npm install and build'
 - task: AzureRmWebAppDeployment@4
   inputs:
