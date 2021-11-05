@@ -22,18 +22,23 @@ export class EditDeviceComponent implements OnInit {
 
   ngOnInit(): void {
     if(localStorage.getItem('deviceId') !== null){
-
+      console.log(localStorage.getItem('deviceId'));
       var deviceId = localStorage.getItem('deviceId') || -1;
 
-      this.deviceService.find(+deviceId).subscribe( device => {
-        this.newDevice = device;
+      var deviceHolder = localStorage.getItem('deviceHolder');
+      var deviceName = localStorage.getItem('deviceName');
+      var phoneNumber = localStorage.getItem('phoneNumber') ;
+      var subscriptionId = localStorage.getItem('subscriptionId') || 0;
+
         this.deviceForm = this.fb.group({
-          deviceName: [this.newDevice.deviceName, Validators.required],
-          deviceHolder: [this.newDevice.deviceHolder, Validators.required],
-          phoneNumber: [this.newDevice.phoneNumber, Validators.required]
-        });
-        localStorage.removeItem('deviceId');
+          deviceName: [deviceName, Validators.required],
+          deviceHolder: [deviceHolder, Validators.required],
+          phoneNumber: [phoneNumber, Validators.required]
+
       });
+      this.newDevice.subscriptionId = +subscriptionId;
+      this.newDevice.id = +deviceId;
+
     } else {
       alert("Device not found!");
       this.router.navigateByUrl('/');
@@ -45,12 +50,12 @@ export class EditDeviceComponent implements OnInit {
     this.newDevice.deviceHolder = this.deviceForm.get('deviceHolder')?.value;
     this.newDevice.deviceName = this.deviceForm.get('deviceName')?.value;
     this.newDevice.phoneNumber = this.deviceForm.get('phoneNumber')?.value;
-    
+    console.warn(this.newDevice);
     this.deviceService.putDevice(this.newDevice).subscribe( res => {
       this.router.navigateByUrl('/myaccount').then(() => {
         window.location.reload();
       });
-    }); 
+    });
   }
 
 }

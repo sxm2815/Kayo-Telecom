@@ -1,19 +1,25 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": "c44cc3e9-a500-4c13-bc6a-6d1d9b22a30d"
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
     "Kayo-Telecom-UI": {
       "projectType": "application",
+      "i18n": {
+        "sourceLocale":{
+          "baseHref": "/",
+          "code":"en-US"
+        },
+        "locales": {
+          "ko": "src/locale/messages.ko.xlf"
+        }
+      },
       "schematics": {
         "@schematics/angular:application": {
           "strict": true
-        }
-      },
-      "i18n": {
-        "sourceLocale":"en-US",
-        "locales": {
-          "kr": "locale/messages.kr.xlf"
         }
       },
       "root": "",
@@ -28,6 +34,7 @@
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
+            "localize":true,
             "assets": [
               "src/favicon.ico",
               "src/assets"
@@ -59,6 +66,7 @@
                 }
               ],
               "outputHashing": "all"
+
             },
             "development": {
               "buildOptimizer": false,

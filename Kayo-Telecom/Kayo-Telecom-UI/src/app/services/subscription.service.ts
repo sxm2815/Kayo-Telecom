@@ -14,8 +14,10 @@ export class SubscriptionService {
   constructor(private httpClient: HttpClient) { }
 
   find(userId:number): Observable<Subscription[]> {
-    return this.httpClient.get<Subscription[]>(this.url + `/${userId}`);
+    return this.httpClient.get<Subscription[]>(this.url + `/user/${userId}`);
   }
+
+
 
   putSubscription(subscription: Subscription): Observable<number> {
     return this.httpClient.put<number>(this.url + `/${subscription.id}`, subscription);
@@ -26,7 +28,7 @@ export class SubscriptionService {
     return this.httpClient.post<number>(this.url, {'userId':userId, 'planId':planId});
   }
 
-  remove(subscription: Subscription):Observable<number> {
-    return this.httpClient.delete<number>(this.url + `/${subscription.id}`);
+  remove(subscriptionId: number):Observable<number> {
+    return this.httpClient.delete<number>(this.url + `/${subscriptionId}`);
   }
 }

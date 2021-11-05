@@ -18,7 +18,7 @@ export class AddDeviceComponent implements OnInit {
     phoneNumber: [''],
     noNumber: ['']
   });
-  
+
   constructor(private router: Router, private deviceService:DeviceService, private fb: FormBuilder) { }
 
   ngOnInit(): void {
@@ -39,8 +39,12 @@ export class AddDeviceComponent implements OnInit {
       this.newDevice.phoneNumber = this.deviceForm.get('phoneNumber')?.value;
     }
 
-    this.deviceService.save(this.newDevice).subscribe(res => {});
-    
+    this.deviceService.save(this.newDevice).subscribe(res => {
+      this.router.navigateByUrl('myaccount').then(()=>{
+        window.location.reload();
+      })
+    });
+
   }
 
 }

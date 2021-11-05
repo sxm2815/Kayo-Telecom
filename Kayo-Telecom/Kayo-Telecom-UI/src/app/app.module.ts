@@ -1,7 +1,11 @@
 import { HttpClientModule } from '@angular/common/http';
-import { NgModule } from '@angular/core';
+import { NgModule, LOCALE_ID } from '@angular/core';
+import { registerLocaleData } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
+
+import localeko from '@angular/common/locales/ko';
+registerLocaleData(localeko);
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -39,7 +43,9 @@ import { AddDeviceComponent } from './add-device/add-device.component';
     ReactiveFormsModule,
     NgbModule
   ],
-  providers: [],
+  providers: [
+    {provide: LOCALE_ID, useValue:'ko'}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
